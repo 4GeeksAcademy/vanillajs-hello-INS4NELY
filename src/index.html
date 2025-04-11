@@ -14,19 +14,30 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="bg-success" onload="myFunction()">
     <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div id="carta" class="container-fluid text-center position-absolute top-50 start-50 translate-middle bg-white col-3" style="height: 40rem; border-radius: 2rem;">
+      <div class="d-flex justify-content-start align-items-start p-4" style="height: 33%; ">
+        <h3 id="palo-izquierdo" style="font-size: 6rem;"></h3>
       </div>
+      <div class="d-flex justify-content-center align-items-center" style="height: 33%; ">
+        <h2 id="numero" style="font-size: 8rem;" >2</h2>
+      </div>
+      <div class="d-flex justify-content-end align-items-end p-4" style="height: 33%;">
+        <h3 id="palo-derecho" style="font-size: 6rem;">♦</h3>
+      </div>
+    </div>
+    <div class="container-fluid col-3" style="position: absolute; top: 50%;">
+      <button id="generate" type="button" class="btn btn-light rounded-3 col-12">Genera una nueva carta</button>
+      <p id="contador" class="mt-2 mb-0 p-2 bg-white rounded-3 col-12"></p>
+      <div class="mt-2">
+        <label class="mt-3">Las medidas del ancho son en rem *</label>
+        <input id="ancho" type="text" placeholder="Elije el ancho de la carta" class="form-control rounded-3 mt-1">
+        <label class="text-white mt-2">Las medidas del alto son en rem *</label>
+        <input id="largo" type="text" placeholder="Elije el alto de la carta" class="form-control rounded-3 mt-1">
+        <button id="reSizes" class="btn btn-light rounded-3 col-12 mt-2">Re dimensionar carta</button>
+      </div>
+
     </div>
 
     <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
